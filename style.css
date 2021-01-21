@@ -1,0 +1,331 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Mulish', sans-serif;
+}
+
+/*HEADER*/
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background: url(img/background.jpg);
+    overflow: hidden;
+}
+
+.header-wrapper{
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.navbar{
+    display: flex;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 25px;
+    
+}
+
+.list-items{
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+}
+
+.list-items a{
+    color: white;
+    font-size: 18px;
+    transition: 0.5s;
+    font-size: 20px;
+}
+
+.list-items a:hover{
+    color: #0099ff;
+}
+
+.header .banner{
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    color: rgb(233, 233, 233);
+}
+
+
+.banner h1{
+    font-size: 71px;
+    padding: 20px;
+    opacity: 0;
+    animation: banner 1.5s forwards;
+}
+
+
+.banner h2{
+    font-size: 36px;
+    line-height: 40px;
+    padding: 20px;
+    opacity: 0;
+    animation: banner 1.5s 0.5s forwards ;
+}
+
+.banner-buttons{
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn{
+    width: 200px;
+    height: 60px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    margin-top: 20px;
+    animation: banner 1.5s 1s forwards;
+    transition: 0.4s;
+    opacity: 0;
+}
+
+.btn:hover{
+    background-color: #0099ff;
+    border-color: #0099ff;
+}
+
+@keyframes banner{
+    0%{
+        transform: translateY(1000px) rotateY(120deg);
+    }
+    100%{
+        transform: translateY(0);
+        opacity:1;
+    }
+}
+
+
+/*TITLES*/
+
+.title h2{
+    font-size: 60px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+/*ABOUT ME*/
+
+.about-me{
+    margin-bottom: 50px;
+}
+
+.profile-pic{
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-pic-img{
+    width: 100%;
+    height: 100%;
+}
+
+.about-me-content{
+    width: 500px;
+    margin: 15px auto;
+    text-align: center;
+}
+
+/*TECHNOLOGIES*/
+
+.experiences{   
+    background-color: rgb(230, 230, 230);
+}
+
+.experiences-wrapper{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.tech{
+    width: 40%;
+}
+
+.h3{
+    font-size: 30px;
+}
+
+.align-right{
+    text-align: right;
+}
+
+.tech-img{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    
+}
+
+.tech-img-reverse{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.tech-img-placeholder{
+    width: 150px;
+    height: 150px;
+    margin: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tech-img-placeholder img{
+    height: 100%;
+}
+
+/*PROJECTS*/
+
+.projects-main{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.project{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.right{
+    flex-direction: row-reverse;
+}
+
+.project-img-placeholder{
+    width: 400px;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.project-img-placeholder img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.project-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 60%;
+    height: 220px;
+}
+
+.project-description h4{
+    font-size: 25px;
+}
+
+.project-description p{
+    font-size: 16px;
+}
+
+.project-description h5{
+    font-size: 18px;
+}
+
+.project-description .project-used-tech{
+    display: flex;
+}
+
+.project-description .project-used-tech p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 30px;
+    margin: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    background-color: #0099ff;
+    font-size: 16px;
+}
+
+
+/* FOOTER*/
+
+footer{
+    height: 200px;
+    background-color: #1a1a1a;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer .icons{
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+}
+
+footer .icons i{
+    color: white;
+    font-size: 30px;
+}
+
+footer .arrow i{
+    color: white;
+    font-size: 40px;
+}
+
+footer .copyright{
+    color: white;
+}
+
+/*ICONS HOVER*/
+
+.fab{
+    transition: 0.3s;
+}
+
+.fa-facebook-f:hover{
+    color:#1877f2;
+}
+
+.fa-instagram:hover{
+    color:#eb256d;
+}
+
+.fa-github:hover{
+    color: #e0c143;
+}
+
+.fa-arrow-alt-circle-up:hover{
+    transition: 0.3s;
+    color: #0099ff;
+}
