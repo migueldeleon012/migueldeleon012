@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <script src="https://kit.fontawesome.com/89d84205ce.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Miguel de Leon</title>
 </head>
 <body>
@@ -15,36 +17,34 @@
             <div class="header-wrapper">
                 <nav class="navbar">
                     <div class="logo">
-                        <h2>DevZone</h2>
+                        <img src="/img/logo.png" alt="">
                     </div>
     
                     <ul class="list-items">
                         <li class="item"><a href="#">Home</a></li>
-                        <li class="item"><a href=".about-me">About me</a></li>
-                        <li class="item"><a href="">Skills</a></li>                    
-                        <li class="item"><a href="">Projects</a></li>
-                        <li class="item"><a href="">Contact Me</a></li>
+                        <li class="item"><a href="#about-me">About me</a></li>
+                        <li class="item"><a href="#skills">Skills</a></li>                    
+                        <li class="item"><a href="#projects">Projects</a></li>
                     </ul>
                 </nav>
                 <div class="banner">
                     <h1>Hi! I'm Miguel de Leon</h1>
                     <h2>Hire me as your next Web Developer!</h2>
-                    <div class="banner-buttons">
-                        <button class="btn">View Projects</button>
-                        <button class="btn">View Resume</button>
+                    <div class="banner-btn">
+                        <a href="#resume"><button class="btn">View Resume</button></a>
                     </div>
                 </div>
             </div>
         </header>
 
-        <section class="about-me">
-            <div class="title">
+        <section id="about-me" class="section">
+            <div class="title" data-aos="fade-up">
                 <h2>About me</h2>
             </div>
-            <div class="profile-pic">
+            <div class="profile-pic" data-aos="fade-up">
                 <img src="img/1.jpg" alt="Miguel de Leon" class="profile-pic-img">
             </div>
-            <div class="about-me-content"> 
+            <div class="about-me-content" data-aos="fade-up"> 
                 <p>
                     Hi! I am Miguel de Leon and i am an aspiring Web Developer with a passion for front-end
                     development and design. I'm currently partecipateing in a coding bootcamp at "Click Academy".
@@ -55,12 +55,12 @@
                 </p>
             </div>
         </section>
-        <section class="experiences">
-            <div class="title">
+        <section id="skills" class="section">
+            <div class="title" data-aos="fade-up">
                 <h2>Skills</h2>
             </div>
-            <div class="experiences-wrapper">
-                <div class="tech">
+            <div class="skills-wrapper">
+                <div class="tech" data-aos="fade-right">
                     <h3 class="h3 align-left">I have experiences in these technologies</h3>
                     <div class="tech-img">
                         <div class="tech-img-placeholder">
@@ -81,7 +81,7 @@
                     </div>
                 </div>
 
-                <div class="tech">
+                <div class="tech" data-aos="fade-left">
                     <h3 class="h3 align-right">Technologies that I will be learning</h3>
                     <div class="tech-img-reverse">
                         <div class="tech-img-placeholder">
@@ -91,10 +91,19 @@
                             <img src="img/node.png" alt="node">
                         </div>
                         <div class="tech-img-placeholder">
-                            <img src="img/php.png" alt="php">
+                            <img src="img/mongodb.png" alt="mongodb">
                         </div>
                         <div class="tech-img-placeholder">
-                            <img src="img/mongodb.png" alt="mongodb">
+                            <img src="img/express.png" alt="express">
+                        </div>
+                        <div class="tech-img-placeholder">
+                            <img src="img/sass.png" alt="sass">
+                        </div>
+                        <div class="tech-img-placeholder">
+                            <img src="img/wordpress.png" alt="wordpress">
+                        </div>
+                        <div class="tech-img-placeholder">
+                            <img src="img/php.png" alt="php">
                         </div>
                         <div class="tech-img-placeholder">
                             <img src="img/photoshop.png" alt="photoshop">
@@ -104,12 +113,22 @@
             </div>
         </section>
 
-        <section class="projects">
+        <section id="resume" class="parallax">
+            <div class="parallax-content" >
+                <h3 data-aos="fade-up">Check out my resume</h3>
+                <div class="buttons" data-aos="fade-up">
+                    <button class="btn">Italian resume</button>
+                    <button class="btn">English resume</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
             <div class="title">
-                <h2>Some Projects that I've done</h2>
+                <h2 data-aos="fade-up">Some Projects that I've done</h2>
             </div>
             <div class="projects-main">
-                <div class="project">
+                <div class="project" data-aos='fade-left' data-aos-offset='400'>
                     <div class="project-img-placeholder">
                         <img src="img/portfolio.jpg" alt="portfolio">
                     </div>
@@ -128,7 +147,7 @@
                     </div>
                 </div>
                 
-                <div class="project right">
+                <div class="project right" data-aos='fade-right' data-aos-offset='400'>
                     <div class="project-img-placeholder">
                         <img src="img/guitar page.jpg" alt="portfolio">
                     </div>
@@ -148,11 +167,12 @@
                 </div>
             </div>
         </section>
+
         <footer>
             <div class="icons">
-                <a href=""><i class="fab fa-facebook-f"></i></a>
-                <a href=""><i class="fab fa-instagram"></i></a>
-                <a href=""><i class="fab fa-github"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100009912155567" target="blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/the_lion012/" target="blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/migueldeleon012" target="blank"><i class="fab fa-github"></i></a>
             </div>
             <div class="arrow">
                 <i class="fas fa-arrow-alt-circle-up"></i>
@@ -162,5 +182,13 @@
             </div>
         </footer>
     </div>
+    <script src="/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+          offset:250,
+          duration:1000,
+      });
+    </script>
 </body>
 </html>

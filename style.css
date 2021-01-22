@@ -5,6 +5,7 @@
     text-decoration: none;
     list-style: none;
     font-family: 'Mulish', sans-serif;
+    font-weight: 200;
 }
 
 /*HEADER*/
@@ -12,7 +13,7 @@
 .header{
     width: 100%;
     height: 100vh;
-    background: url(img/background.jpg);
+    background: url(img/background.jpg) fixed no-repeat;
     overflow: hidden;
 }
 
@@ -24,19 +25,27 @@
 }
 
 .navbar{
+    width: 100%;
     display: flex;
     height: 70px;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
 }
 
 .logo{
-    width: 15%;
+    width: 20%;
+    height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     color: white;
     font-size: 25px;
     
+}
+
+.logo img{
+    height: 90%;
 }
 
 .list-items{
@@ -45,7 +54,7 @@
     width: 40%;
 }
 
-.list-items a{
+a{
     color: white;
     font-size: 18px;
     transition: 0.5s;
@@ -57,8 +66,8 @@
 }
 
 .header .banner{
-    width: 80%;
-    height: 80vh;
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -84,10 +93,10 @@
     animation: banner 1.5s 0.5s forwards ;
 }
 
-.banner-buttons{
+.buttons{
     width: 500px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .btn{
@@ -99,8 +108,11 @@
     color: white;
     font-size: 16px;
     margin-top: 20px;
+    transition: 0.3s;
+}
+
+.banner-btn{
     animation: banner 1.5s 1s forwards;
-    transition: 0.4s;
     opacity: 0;
 }
 
@@ -120,20 +132,29 @@
 }
 
 
-/*TITLES*/
+/*NAV SCROLLED*/
+
+.nav-scrolled{
+    transition: 0.4s;
+    background-color: rgb(24, 24, 24);
+    height: 60px;
+    z-index: 3;
+}
+
+/*SECTIONS*/
 
 .title h2{
     font-size: 60px;
     padding: 20px;
     text-align: center;
-    margin: 20px;
+    margin: 10px 0 50px 0;
+}
+
+.section{
+    padding: 30px 0;
 }
 
 /*ABOUT ME*/
-
-.about-me{
-    margin-bottom: 50px;
-}
 
 .profile-pic{
     width: 200px;
@@ -156,11 +177,13 @@
 
 /*TECHNOLOGIES*/
 
-.experiences{   
-    background-color: rgb(230, 230, 230);
+#skills{   
+    background-color: rgb(236, 236, 236);
+    margin-bottom: 0;
+    padding: 50px;
 }
 
-.experiences-wrapper{
+.skills-wrapper{
     display: flex;
     width: 80%;
     margin: auto;
@@ -193,9 +216,9 @@
 }
 
 .tech-img-placeholder{
-    width: 150px;
-    height: 150px;
-    margin: 40px 20px;
+    width: 120px;
+    height: 120px;
+    margin: 40px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -274,13 +297,34 @@
     font-size: 16px;
 }
 
+/*RESUME*/
+
+.parallax{
+    background: url('img/resume\ parallax.jfif') repeat fixed 100%;
+    height: 30vh;
+}
+
+.parallax-content{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+
+.parallax-content h3{
+    font-size: 30px;
+}
+
 
 /* FOOTER*/
 
 footer{
     height: 200px;
     background-color: #1a1a1a;
-    margin-top: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -329,3 +373,7 @@ footer .copyright{
     transition: 0.3s;
     color: #0099ff;
 }
+
+/*responsiveness*/
+
+@media()
