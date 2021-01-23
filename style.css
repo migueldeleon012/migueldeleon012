@@ -14,6 +14,7 @@
     width: 100%;
     height: 100vh;
     background: url(img/background.jpg) fixed no-repeat;
+    background-size: cover;
     overflow: hidden;
 }
 
@@ -29,8 +30,16 @@
     display: flex;
     height: 70px;
     align-items: center;
-    justify-content: space-between;
-    position: fixed;
+    justify-content: space-around;
+}
+
+.active::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    display: block;
+    background-color: white;
+    margin-top: 5px;
 }
 
 .logo{
@@ -51,7 +60,9 @@
 .list-items{
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     width: 40%;
+    height: 100%;
 }
 
 a{
@@ -61,7 +72,7 @@ a{
     font-size: 20px;
 }
 
-.list-items a:hover{
+.list-items a:hover, .list-items .active{
     color: #0099ff;
 }
 
@@ -139,6 +150,7 @@ a{
     background-color: rgb(24, 24, 24);
     height: 60px;
     z-index: 3;
+    position: fixed;
 }
 
 /*SECTIONS*/
@@ -147,11 +159,14 @@ a{
     font-size: 60px;
     padding: 20px;
     text-align: center;
-    margin: 10px 0 50px 0;
+}
+
+.title{
+    margin: 30px;
 }
 
 .section{
-    padding: 30px 0;
+    margin: 30px 0;
 }
 
 /*ABOUT ME*/
@@ -180,8 +195,8 @@ a{
 #skills{   
     background-color: rgb(236, 236, 236);
     margin-bottom: 0;
-    padding: 50px;
-}
+    padding: 20px;
+}   
 
 .skills-wrapper{
     display: flex;
@@ -206,7 +221,6 @@ a{
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    
 }
 
 .tech-img-reverse{
@@ -218,10 +232,17 @@ a{
 .tech-img-placeholder{
     width: 120px;
     height: 120px;
-    margin: 40px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.margin-right-none{
+    margin: 40px 0 40px 10px;
+}
+
+.margin-left-none{
+    margin:40px 10px 40px 0;
 }
 
 .tech-img-placeholder img{
@@ -237,6 +258,7 @@ a{
 
 .project{
     width: 100%;
+    height: 200px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -249,7 +271,6 @@ a{
 
 .project-img-placeholder{
     width: 400px;
-    height: 220px;
     overflow: hidden;
     border-radius: 20px;
 }
@@ -265,7 +286,7 @@ a{
     flex-direction: column;
     justify-content: space-evenly;
     width: 60%;
-    height: 220px;
+    height: 100%;
 }
 
 .project-description h4{
@@ -300,7 +321,7 @@ a{
 /*RESUME*/
 
 .parallax{
-    background: url('img/resume\ parallax.jfif') repeat fixed 100%;
+    background: url('img/resume\ parallax.jfif') no-repeat fixed center 100%;
     height: 30vh;
 }
 
@@ -318,6 +339,7 @@ a{
 .parallax-content h3{
     font-size: 30px;
 }
+
 
 
 /* FOOTER*/
@@ -376,4 +398,186 @@ footer .copyright{
 
 /*responsiveness*/
 
-@media()
+@media(max-width: 1850px){
+    .tech h3{
+        font-size: 26px;
+    }
+
+    .tech .tech-img-placeholder{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media(max-width: 1600px){
+    .tech h3{
+        font-size: 22px;
+    }
+
+    .tech .tech-img-placeholder{
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media(max-width: 1350px){
+    .navbar{
+        height: 40px;
+    }
+
+    .navbar ul li a{
+        font-size: 12px;
+    }
+
+    .banner h1{
+        font-size: 50px;
+    }
+
+    .banner h2{
+        font-size: 26px;
+        line-height: 20px;
+    }
+
+    .btn{
+        width: 160px;
+        height: 45px;
+        font-size: 12px;
+    }
+    
+    .about-me-content{
+        width: 450px;
+        font-size: 12px;
+    }
+    
+    .title{
+        margin: 20px;
+    }
+
+    .title h2{
+        font-size: 45px;
+        margin: 10px 0 10px 0;
+        padding: 10px;
+    }
+
+    .section{
+        margin: 0px;
+    }
+
+    .profile-pic{
+        width: 150px;
+        height: 150px;
+    }
+
+
+    .tech{
+        width: 30%;
+    }
+
+    .tech h3{
+        font-size: 16px;
+    }
+
+    .tech .tech-img-placeholder{
+        width: 50px;
+        height: 50px;
+    }
+
+    .margin-right-none{
+        margin: 15px 0 15px 10px;
+    }
+    
+    .margin-left-none{
+        margin: 15px 10px 15px 0;
+    }
+
+    .project-img-placeholder{
+        width: 300px;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    .project-description{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 60%;
+    }
+
+    .project-description h4{
+        font-size: 18px;
+    }
+
+    .project-description p{
+        font-size: 12px;
+    }
+
+    .project-description h5{
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 1250px){
+    .skills-wrapper .tech h3{
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 1040px){
+    .navbar{
+        height: 30px;
+    }
+
+    .navbar .list-items li a{
+        font-size: 10px;
+    }
+
+    .banner h1{
+        font-size: 36px;
+    }
+
+    .banner h2{
+        font-size: 20px;
+    }
+
+    .btn{
+        width: 120px;
+        height: 40px;
+        border: 1px solid white;
+        font-size: 10px;
+    }
+
+    .title{
+        margin: 0px;
+    }
+
+    .title h2{
+        font-size: 34px;
+    }
+
+    .profile-pic{
+        width: 100px;
+        height: 100px;
+        margin: 30px auto;
+    }
+
+    .about-me-content{
+        width: 350px;
+    }
+
+    .about-me-content p{
+        font-size: 10px;
+    }
+
+    #skills{
+        padding: 10px;
+    }
+
+    .tech .tech-img-placeholder{
+        width: 40px;
+        height: 40px;
+    }
+
+    .parallax{
+        height: 40vh;
+    }
+}

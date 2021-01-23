@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <script src="https://kit.fontawesome.com/89d84205ce.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://kit.fontawesome.com/89d84205ce.js" crossorigin="anonymous"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
     <title>Miguel de Leon</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="header">
         <header class="header">
             <div class="header-wrapper">
                 <nav class="navbar">
@@ -21,10 +25,10 @@
                     </div>
     
                     <ul class="list-items">
-                        <li class="item"><a href="#">Home</a></li>
-                        <li class="item"><a href="#about-me">About me</a></li>
-                        <li class="item"><a href="#skills">Skills</a></li>                    
-                        <li class="item"><a href="#projects">Projects</a></li>
+                        <li class="item"><a href="#header" class="scroll-links">Home</a></li>
+                        <li class="item"><a href="#about-me" class="scroll-links">About me</a></li>
+                        <li class="item"><a href="#skills" class="scroll-links">Skills</a></li>                    
+                        <li class="item"><a href="#projects" class="scroll-links">Projects</a></li>
                     </ul>
                 </nav>
                 <div class="banner">
@@ -63,49 +67,49 @@
                 <div class="tech" data-aos="fade-right">
                     <h3 class="h3 align-left">I have experiences in these technologies</h3>
                     <div class="tech-img">
-                        <div class="tech-img-placeholder">
+                        <div class="tech-img-placeholder margin-left-none">
                             <img src="img/html.png" alt="html">
                         </div>
-                        <div class="tech-img-placeholder">
+                        <div class="tech-img-placeholder margin-left-none">
                         <img src="img/css.png" alt="css">
                         </div>
-                        <div class="tech-img-placeholder">
+                        <div class="tech-img-placeholder margin-left-none">
                             <img src="img/js.png" alt='js'>
                         </div>
-                        <div class="tech-img-placeholder">
+                        <div class="tech-img-placeholder margin-left-none">
                             <img src="img/jquery.png" alt="jquery">
                         </div>
-                        <div class="tech-img-placeholder">
+                        <div class="tech-img-placeholder margin-left-none">
                             <img src="img/bootstrap.png" alt="bootstrap">
                         </div>
                     </div>
                 </div>
 
                 <div class="tech" data-aos="fade-left">
-                    <h3 class="h3 align-right">Technologies that I will be learning</h3>
+                    <h3 class="h3 align-right">Some technologies that I will be learning</h3>
                     <div class="tech-img-reverse">
-                        <div class="tech-img-placeholder">
+                        <div class="tech-img-placeholder margin-right-none">
                             <img src="img/react.png" alt="react">
                         </div>
-                        <div class="tech-img-placeholder">
+                        <div class="tech-img-placeholder margin-right-none">
                             <img src="img/node.png" alt="node">
                         </div>
-                        <div class="tech-img-placeholder">
+                        <div class="tech-img-placeholder margin-right-none">
                             <img src="img/mongodb.png" alt="mongodb">
                         </div>
-                        <div class="tech-img-placeholder">
+                        <div class="tech-img-placeholder margin-right-none">
                             <img src="img/express.png" alt="express">
                         </div>
-                        <div class="tech-img-placeholder">
+                        <div class="tech-img-placeholder margin-right-none">
                             <img src="img/sass.png" alt="sass">
                         </div>
-                        <div class="tech-img-placeholder">
+                        <div class="tech-img-placeholder margin-right-none">
                             <img src="img/wordpress.png" alt="wordpress">
                         </div>
-                        <div class="tech-img-placeholder">
+                        <div class="tech-img-placeholder margin-right-none">
                             <img src="img/php.png" alt="php">
                         </div>
-                        <div class="tech-img-placeholder">
+                        <div class="tech-img-placeholder margin-right-none">
                             <img src="img/photoshop.png" alt="photoshop">
                         </div>
                     </div>
@@ -175,7 +179,7 @@
                 <a href="https://github.com/migueldeleon012" target="blank"><i class="fab fa-github"></i></a>
             </div>
             <div class="arrow">
-                <i class="fas fa-arrow-alt-circle-up"></i>
+                <a href="#header" class="scroll"><i class="fas fa-arrow-alt-circle-up"></i></a>
             </div>
             <div class="copyright">
                 <p>	&copy; Miguel de Leon 2021</p>
@@ -185,10 +189,12 @@
     <script src="/script.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init({
-          offset:250,
-          duration:1000,
-      });
+        AOS.init({
+            disable: 'tablet',
+            offset:200,
+            duration:1000,
+            once: true
+        });
     </script>
 </body>
 </html>
