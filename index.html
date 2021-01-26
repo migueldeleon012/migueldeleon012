@@ -22,6 +22,7 @@
                 <nav class="navbar">
                     <div class="logo">
                         <img src="/img/logo.png" alt="">
+                        <p>Miguel de Leon</p>
                     </div>
                     <div class="hamburger">
                         <div class="line line-1"></div>
@@ -39,9 +40,6 @@
                 <div class="banner">
                     <h1>Hi! I'm Miguel de Leon</h1>
                     <h2>Hire me as your next Web Developer!</h2>
-                    <div class="banner-btn">
-                        <a href="#resume"><button class="btn">View Resume</button></a>
-                    </div>
                 </div>
             </div>
         </header>
@@ -152,6 +150,7 @@
                             <p>HTML</p>
                             <p>CSS</p>
                             <p>JS</p>
+                            <p>Jquery</p>
                         </div>
                     </div>
                 </div>
@@ -195,10 +194,13 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({
-            disable: 'tablet',
             offset:200,
             duration:1000,
-            once: true
+            once: true,
+            disable: function() {
+                var maxWidth = 800;
+                return window.innerWidth < maxWidth;
+            }
         });
     </script>
 </body>

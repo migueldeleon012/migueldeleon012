@@ -8,14 +8,17 @@
     font-weight: 200;
 }
 
+.overflow{
+    overflow: hidden;
+}
+
 /*HEADER*/
 
 .header{
     width: 100%;
     height: 100vh;
     background: url(img/background.jpg) fixed no-repeat;
-    background-size: cover;
-    overflow: hidden;
+    background-size: auto;
 }
 
 .header-wrapper{
@@ -31,6 +34,7 @@
     height: 70px;
     align-items: center;
     justify-content: space-around;
+    transition: 0.3s;
 }
 
 .active::after{
@@ -43,18 +47,24 @@
 }
 
 .logo{
-    width: 20%;
+    width: 30%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     font-size: 25px;
+    z-index: 99;
     
 }
 
 .logo img{
-    height: 80%;
+    height: 60%;
+}
+
+.logo p{
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .list-items{
@@ -89,20 +99,14 @@ a{
 /*NAV MOBILE*/
 
 .hamburger{
-    width: 30px;
-    height: 30px;
-    background-color: red;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    cursor: pointer;
+    display: none;
 }
 
 .line{
-    width: 80%;
+    width: 20px;
     height: 2px;
     background-color: white;
+    margin: 5px;
 }
 
 
@@ -115,6 +119,7 @@ a{
     align-items: center;
     margin: 0 auto;
     color: rgb(233, 233, 233);
+    text-transform: uppercase;
 }
 
 
@@ -152,11 +157,6 @@ a{
     transition: 0.3s;
 }
 
-.banner-btn{
-    animation: banner 1.5s 1s forwards;
-    opacity: 0;
-}
-
 .btn:hover{
     background-color: #0099ff;
     border-color: #0099ff;
@@ -180,6 +180,8 @@ a{
     font-size: 60px;
     padding: 20px;
     text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
 }
 
 .title{
@@ -187,6 +189,7 @@ a{
 }
 
 .section{
+    width: 100%;
     margin: 30px 0;
 }
 
@@ -312,6 +315,8 @@ a{
 
 .project-description h4{
     font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 300;
 }
 
 .project-description p{
@@ -320,6 +325,8 @@ a{
 
 .project-description h5{
     font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 300;
 }
 
 .project-description .project-used-tech{
@@ -372,6 +379,7 @@ footer{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    color: white;
 }
 
 footer .icons{
@@ -381,17 +389,15 @@ footer .icons{
 }
 
 footer .icons i{
-    color: white;
     font-size: 30px;
+    text-align: center;
 }
+
 
 footer .arrow i{
+    text-align: center;
     color: white;
     font-size: 40px;
-}
-
-footer .copyright{
-    color: white;
 }
 
 /*ICONS HOVER*/
@@ -419,7 +425,7 @@ footer .copyright{
 
 /*responsiveness*/
 
-@media(max-width: 1850px){
+@media screen and (max-width: 1850px){
     .tech h3{
         font-size: 26px;
     }
@@ -430,7 +436,7 @@ footer .copyright{
     }
 }
 
-@media(max-width: 1600px){
+@media screen and (max-width: 1600px){
     .tech h3{
         font-size: 22px;
     }
@@ -441,7 +447,7 @@ footer .copyright{
     }
 }
 
-@media(max-width: 1350px){
+@media screen and (max-width: 1350px){
     .navbar{
         height: 40px;
     }
@@ -537,19 +543,49 @@ footer .copyright{
     }
 }
 
-@media(max-width: 1250px){
+@media screen and (max-width: 1250px){
     .skills-wrapper .tech h3{
         font-size: 14px;
     }
+
+    .project{
+        margin-bottom: 20px;
+    }
+
+    .project-img-placeholder{
+        width: 250px;
+    }
+
+    .project-description h4{
+        font-size: 16px;
+    }
+    
+    .project-description p{
+        font-size: 12px;
+    }
+    
+    .project-description h5{
+        font-size: 16px;
+    }
+    
+    .project-description .project-used-tech p{
+        width: 60px;
+        height: 20px;
+        font-size: 12px;
+    }
 }
 
-@media(max-width: 1040px){
+@media screen and (max-width: 1040px){
     .navbar{
         height: 30px;
     }
 
     .navbar .list-items li a{
         font-size: 10px;
+    }
+
+    .logo p{
+        font-size: 14px;
     }
 
     .banner h1{
@@ -599,11 +635,93 @@ footer .copyright{
     }
 
     .parallax{
-        height: 40vh;
+        height: 25vh;
+    }
+
+    .project{
+        margin-bottom: 20px;
+    }
+
+    .project-description{
+        height: 80%;
+    }
+
+    .project-description h4{
+        font-size: 14px;
+    }
+
+    footer{
+        height: 150px;
+    }
+    
+    footer .icons i{
+        font-size: 20px;
+    }
+
+    footer .arrow i{
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 856px){
+    .tech{
+        width: 45%;
+    }
+
+    .project{
+        height: 35vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .project .project-img-placeholder{
+        height: 200px;
+    }
+
+
+    .project-description{
+        margin-left: 10px;
+    }
+
+    .project-description h4{
+        font-size: 16px;
+    }
+
+    .project-description p{
+        font-size: 10px;
+    }
+
+    .project-description h5{
+        font-size: 12px;
+    }
+
+    .project-description .project-used-tech p{
+        font-size: 10px;
     }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 770px){
+    .banner h1{
+        animation: none;
+        opacity: 1;
+    }
+
+    .banner h2{
+        animation: none;
+        opacity: 1;
+    }
+
+    .navbar{
+        justify-content: flex-start;
+    }
+
+    .logo{
+        margin-left: 30px;
+    }
+
     .list-items{
         flex-direction: column;
         position: absolute;
@@ -612,12 +730,54 @@ footer .copyright{
         height: 40vh;
         background-color: black;
         z-index: 3;
+        visibility: hidden;
     }
 
     .hamburger{
-        z-index: 4;
+        z-index: 10;
+        display: block;
         position: absolute;
-        top: 2%;
-        right: 5%;
+        top: 25%;
+        right: 30px;
+    }
+
+    .nav-scrolled{
+        height: 50px;
+    }
+    
+    .skills-wrapper{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tech-mobile{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        justify-content: center;
+    }
+
+    .tech-mobile .h3{
+        text-align: center;
+    }
+
+    .tech-img-mobile{
+        display: flex;
+        justify-content: center;
+        margin: 10px 0;
+        flex-wrap: wrap;
+    }
+
+    .tech-img-mobile .tech-img-placeholder{
+        margin: 10px;
+    }
+}
+
+@media screen and(max-width: 510px){
+    html, body{
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 }
