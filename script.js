@@ -6,7 +6,7 @@ $(document).ready(function() {
       $('.navbar').addClass('nav-scrolled')
       $('.h3').removeClass('align-right').removeClass('align-left')
       $('.tech-img-placeholder').removeClass('margin-left-none').removeClass('margin-right-none')
-      $('.tech').addClass('tech-mobile')
+      $('.tech').removeClass().addClass('tech-mobile')
       $('.tech-img').removeClass().addClass('tech-img-mobile')
       $('.tech-img-reverse').removeClass().addClass('tech-img-mobile')
 
