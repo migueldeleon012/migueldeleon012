@@ -1,5 +1,6 @@
 
 $(document).ready(function() {
+    console.log('ghe')
     let query = window.matchMedia('(max-width: 768px)')
     let nav = document.querySelector('.navbar');
     if(query.matches){
@@ -22,7 +23,7 @@ $(document).ready(function() {
     })
     }
     else{
-      window.addEventListener('scroll', function(){
+      $(window).scroll(function(){
           let scrolled = window.scrollY > 0;
           nav.classList.toggle('nav-scrolled', scrolled)
       })

@@ -298,12 +298,28 @@ a{
     width: 400px;
     overflow: hidden;
     border-radius: 20px;
+    position: relative;
 }
 
 .project-img-placeholder img{
     width: 100%;
     object-fit: cover;
     border-radius: 20px;
+}
+
+.project-img-placeholder .view-project{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.project-img-placeholder .view-project i{
+    font-size: 50px;
 }
 
 .project-description{
@@ -332,16 +348,17 @@ a{
 
 .project-description .project-used-tech{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .project-description .project-used-tech div{
     display: flex;
+    flex-direction: column;
     width: 80px;
     height: 20px;
     justify-content: center;
     align-items: center;
-    margin: 10px 20px;
+    margin: 10px 20px 10px 0;
     border-radius: 5px;
     color: white;
     background-color: #0099ff;
@@ -674,10 +691,6 @@ footer .arrow i{
     }
 
 
-    .project-description{
-        margin-left: 10px;
-    }
-
     .project-description h4{
         font-size: 16px;
     }
@@ -688,6 +701,10 @@ footer .arrow i{
 
     .project-description h5{
         font-size: 12px;
+    }
+
+    .project-description .project-used-tech{
+        justify-content: center;
     }
 
     .project-description .project-used-tech p{
@@ -777,6 +794,13 @@ footer .arrow i{
 }
 
 @media screen and (max-width: 560px){
+    .logo{
+        width: 40%;
+    }
+
+    .logo p{
+        font-size: 12px;
+    }
     .title h2{
         font-size:20px;
     }
@@ -815,7 +839,8 @@ footer .arrow i{
     }
 
     .project .project-used-tech div{
-        width: 50px;
+        width: 40px;
+        height: 18px;
         margin: 10px;
     }
 }
