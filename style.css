@@ -334,8 +334,14 @@ a{
     background-color: rgba(0, 0, 0, 0.4);
 }
 
+
+
 .view-project:hover a i{
     color: white;
+}
+
+.view-project-mobile{
+    display: none;
 }
 
 .view-project-mobile a i{
@@ -840,6 +846,11 @@ a:hover .fa-globe-europe:hover{
 
     .project-img-placeholder .view-project{
         display: none;
+    }
+
+    .view-project-mobile{
+        display: flex;
+        justify-content: space-evenly;
     }
 }
 
