@@ -303,6 +303,7 @@ a{
 
 .project-img-placeholder img{
     width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 20px;
 }
@@ -335,6 +336,10 @@ a{
 
 .view-project:hover a i{
     color: white;
+}
+
+.view-project-mobile a i{
+    color: black;
 }
 
 .project-description{
@@ -732,6 +737,10 @@ a:hover .fa-globe-europe:hover{
 }
 
 @media screen and (max-width: 770px){
+    .black{
+        color: black;
+        border: 1px solid black;
+    }
     .banner h1{
         animation: none;
         opacity: 1;
@@ -807,8 +816,30 @@ a:hover .fa-globe-europe:hover{
         margin: 10px;
     }
 
-    .project-used-tech p{
-        width: 50px;
+    .project{
+        margin-bottom: 20px;
+    }
+
+    .project .project-img-placeholder{
+        width: 80%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .project .project-description{
+        height: 10vh;
+    }
+
+    .project-description h5, .project-description p{
+        display: none;
+    }
+
+    .project .project-used-tech div{
+        display: none;
+    }
+
+    .project-img-placeholder .view-project{
+        display: none;
     }
 }
 
@@ -875,5 +906,36 @@ a:hover .fa-globe-europe:hover{
 
     .banner h2{
         font-size: 18px;
+    }
+
+    .btn{
+        width: 60px;
+        height: 20px;
+        border-radius: 5px;
+        font-size: 6px;
+    }
+}
+
+@media screen and (max-width: 340px){
+    .about-me-content{
+        width: 80%;
+    }
+
+    .project{
+        margin: 0;
+        height: 40vh;
+    }
+    .project-description{
+        margin-top: 10px;
+    }
+
+    .project-description h4{
+        font-size: 8px;
+    }
+}
+
+@media (orientation: portrait){
+    .header{
+        background-size: cover;
     }
 }

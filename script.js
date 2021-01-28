@@ -1,7 +1,6 @@
 
 $(document).ready(function() {
-    console.log('ghe')
-    let query = window.matchMedia('(max-width: 768px)')
+    let query = window.matchMedia('(max-width: 770px)')
     let nav = document.querySelector('.navbar');
     if(query.matches){
       $('.navbar').addClass('nav-scrolled')
