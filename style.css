@@ -308,6 +308,9 @@ a{
 }
 
 .project-img-placeholder .view-project{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -315,11 +318,23 @@ a{
     left: 0;
     right: 0;
     bottom: 0;
-    margin: auto;
+    background-color: transparent;
+    transition: 0.3s;
 }
 
-.project-img-placeholder .view-project i{
+
+.project-img-placeholder .view-project a i{
     font-size: 50px;
+    margin: 20px;
+    color: transparent;
+}
+
+.view-project:hover{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.view-project:hover a i{
+    color: white;
 }
 
 .project-description{
@@ -426,7 +441,7 @@ footer .arrow i{
 
 /*ICONS HOVER*/
 
-.fab{
+i{
     transition: 0.3s;
 }
 
@@ -438,8 +453,12 @@ footer .arrow i{
     color:#eb256d;
 }
 
-.fa-github:hover{
+a:hover .fa-github:hover{
     color: #e0c143;
+}
+
+a:hover .fa-globe-europe:hover{
+    color: rgb(63, 190, 31);
 }
 
 .fa-arrow-alt-circle-up:hover{
@@ -820,7 +839,11 @@ footer .arrow i{
     }
 }
 
-@media screen and (max-width:430px){
+@media screen and (max-width:440px){
+    .banner h1{
+        font-size: 38px;
+        width: 80%;
+    }
     .tech .tech-img-placeholder{
         width: 30px;
         height: 30px;
@@ -842,5 +865,15 @@ footer .arrow i{
         width: 40px;
         height: 18px;
         margin: 10px;
+    }
+}
+
+@media screen and (max-width: 370px){
+    .banner h1{
+        font-size: 30px;
+    }
+
+    .banner h2{
+        font-size: 18px;
     }
 }
